@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "deathshutdownmod",
+  "version": "${version}",
+
+  "name": "deathShutdownMod",
+  "description": "Minecraft Fabric mod that gives your death consequences by shutting down your PC",
+  "authors": [
+    "3urobeat"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": "https://github.com/HerrEurobeat/deathShutdownMod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/lightLevelsMod/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.herreurobeat.deathShutdownMod.Main"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
