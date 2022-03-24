@@ -23,6 +23,7 @@
     ]
   },
   "mixins": [
+    "deathShutdownMod.mixins.json"
   ],
 
   "depends": {
