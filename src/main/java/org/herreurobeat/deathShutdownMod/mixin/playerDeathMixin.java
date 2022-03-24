@@ -19,6 +19,29 @@ public class playerDeathMixin {
     @Inject(method = "onCombatEvent", at = @At("HEAD"))
     public void onClientDeath(CombatEventS2CPacket packet, CallbackInfo ci) throws IOException {
         if (!RenderSystem.isOnRenderThread()) return;
-        
+
+        //run shutdown method on death
+        shutdownPC();
+    }
+
+    /**
+     * Cross-platform shutdown function - Credit: https://stackoverflow.com/a/25666
+     */
+    private static void shutdownPC() throws RuntimeException, IOException {
+        String shutdownCommand;
+        String operatingSystem = System.getProperty("os.name");
+
+        if ("Linux".equals(operatingSystem) || "Mac OS X".equals(operatingSystem)) {
+            shutdownCommand = "shutdown -h now";
+        }
+        else if ("Windows".equals(operatingSystem)) {
+            shutdownCommand = "shutdown.exe -s -t 0";
+        }
+        else {
+            throw new RuntimeException("Unsupported operating system.");
+        }
+
+        Runtime.getRuntime().exec(shutdownCommand);
+        System.exit(0);
     }
 }
