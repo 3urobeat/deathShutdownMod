@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "org.herreurobeat.deathShutdownMod.Main"
+      "org.herreurobeat.deathShutdownMod.client.Main"
     ]
   },
   "mixins": [
