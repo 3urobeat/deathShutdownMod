@@ -1,8 +1,8 @@
 package org.herreurobeat.deathShutdownMod.mixin;
 
-import net.minecraft.network.packet.s2c.play.CombatEventS2CPacket;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
+import net.minecraft.network.packet.s2c.play.DeathMessageS2CPacket;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -16,8 +16,8 @@ import java.io.IOException;
 @Mixin(ClientPlayNetworkHandler.class)
 public class playerDeathMixin {
 
-    @Inject(method = "onCombatEvent", at = @At("HEAD"))
-    public void onClientDeath(CombatEventS2CPacket packet, CallbackInfo ci) throws IOException {
+    @Inject(method = "onDeathMessage", at = @At("HEAD"))
+    public void onClientDeath(DeathMessageS2CPacket packet, CallbackInfo ci) throws IOException {
         if (!RenderSystem.isOnRenderThread()) return;
 
         //run shutdown method on death
