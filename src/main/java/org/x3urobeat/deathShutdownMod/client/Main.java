@@ -1,4 +1,4 @@
-package org.herreurobeat.deathShutdownMod.client;
+package org.x3urobeat.deathShutdownMod.client;
 
 import net.fabricmc.api.ModInitializer;
 

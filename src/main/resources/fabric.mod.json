@@ -10,7 +10,7 @@
   ],
   "contact": {
     "homepage": "",
-    "sources": "https://github.com/HerrEurobeat/deathShutdownMod"
+    "sources": "https://github.com/3urobeat/deathShutdownMod"
   },
 
   "license": "MIT",
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "org.herreurobeat.deathShutdownMod.client.Main"
+      "org.x3urobeat.deathShutdownMod.client.Main"
     ]
   },
   "mixins": [

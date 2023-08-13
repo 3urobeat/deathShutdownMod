@@ -1,4 +1,4 @@
-package org.herreurobeat.deathShutdownMod.mixin;
+package org.x3urobeat.deathShutdownMod.mixin;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
@@ -20,7 +20,7 @@ public class playerDeathMixin {
     public void onClientDeath(DeathMessageS2CPacket packet, CallbackInfo ci) throws IOException {
         if (!RenderSystem.isOnRenderThread()) return;
 
-        //run shutdown method on death
+        // Run shutdown method on death
         shutdownPC();
     }
 
