@@ -14,7 +14,7 @@
   },
 
   "license": "MIT",
-  "icon": "assets/lightLevelsMod/icon.png",
+  "icon": "",
 
   "environment": "*",
   "entrypoints": {
